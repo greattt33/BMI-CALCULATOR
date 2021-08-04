@@ -1,75 +1,6 @@
 body{
 	margin:0px;
 }
-@media only screen and (max-width:600px){
-	.site{
-		height:200vh;
-		display:grid;
-		place-items:center;
-	}
-	#container{
-		width:80vw;
-		height:180vh;
-		display:grid;
-		place-items:center;
-	}
-	#small-container{
-		width:70vw;
-		height:150vh;
-		display:grid;
-		grid-template-rows:repeat(2,auto);
-		grid-template-columns:1fr;
-		grid-template-areas:"input"
-		                    "result";
-	}
-	#input{
-		grid-area:"input";
-		width:95vh;
-		height:60vw;
-		display:grid;
-		grid-template-areas:"screen"
-		                    "btn-box";
-		grid-template-rows:repeat(2,auto);
-		grid-template-columns:1fr;
-		grid-gap:2.5vh;
-	}
-	#btn-box{
-		grid-area:"btn-box";
-		width:60vw;
-		height:50vw;
-		display:grid;
-		grid-template-areas:"num-box control";
-		grid-template-rows:repeat(2,auto);
-		grid-template-columns:1fr;
-		grid-gap:2.5vh;
-	}
-	#screen{
-		width:60vw;
-		height:20vh;
-		grid-area:"screen";
-	}
-	#num-box{
-
-		grid-area:"btn-box";
-		height:50vh;
-	}
-	#control-box{
-		width:20vw;
-		height:50vh;
-		grid-area:"control";
-	}
-	#result{
-		width:60vw;
-		height:40vh;
-		grid-area:"result";
-	}
-	meter{
-	width:40vw;
-	height:30px;
-	}
-	
-}
-@media only screen and (min-width:768px){
 .site{
 	display:grid;
 	place-items:center;
@@ -105,7 +36,7 @@ body{
 	grid-template-rows:auto 1fr;
 	grid-gap:5vh;
 	grid-template-areas:"screen"
-			    "btn-box";
+						"btn-box";
 }
 #result{
 	grid-area:"result";
@@ -116,7 +47,7 @@ body{
 	grid-template-columns:1fr;
 	grid-template-rows:1fr 1fr;
 	grid-template-areas:"real"
-			    "key";
+						"key";
 	width:20vw;
 	height:50vh;
 }
@@ -289,4 +220,71 @@ a{
 	text-decoration:none;
 	color:white;
 }
-}
+
+@media only screen and (max-width:768px){
+	.site{
+		height:200vh;
+		display:grid;
+		place-items:center;
+	}
+	#container{
+		width:80vw;
+		height:180vh;
+		display:grid;
+		place-items:center;
+	}
+	#small-container{
+		width:70vw;
+		height:150vh;
+		display:grid;
+		grid-template-rows:repeat(2,auto);
+		grid-template-columns:1fr;
+		grid-template-areas:"input"
+		                    "result";
+	}
+	#input{
+		grid-area:"input";
+		width:95vh;
+		height:60vw;
+		display:grid;
+		grid-template-areas:"screen"
+		                    "btn-box"
+		grid-template-rows:repeat(2,auto);
+		grid-template-columns:1fr;
+		grid-gap:2.5vh;
+	}
+	#btn-box{
+		grid-area:"btn-box";
+		width:60vw;
+		height:50vw;
+		display:grid;
+		grid-template-areas:"num-box control";
+		grid-template-rows:repeat(2,auto);
+		grid-template-columns:1fr;
+		grid-gap:2.5vh;
+	}
+	#screen{
+		width:60vw;
+		height:20vh;
+		grid-area:"screen";
+	}
+	#num-box{
+
+		grid-area:"btn-box";
+		height:50vh;
+	}
+	#control-box{
+		width:20vw;
+		height:50vh;
+		grid-area:"control";
+	}
+	#result{
+		width:60vw;
+		height:40vh;
+		grid-area:"result";
+	}
+	meter{
+	width:40vw;
+	height:30px;
+	}
+	
