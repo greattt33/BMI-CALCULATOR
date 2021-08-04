@@ -1,0 +1,290 @@
+body{
+	margin:0px;
+}
+.site{
+	display:grid;
+	place-items:center;
+	font-family:vandana, sans-serif;
+	width:100vw;
+	height:100vh;
+}
+#container{
+	display:grid;
+	border:1px solid ivory;
+	width:80vw;
+	height:80vh;
+	place-items:center;
+}
+#small-container{
+	display:grid;
+	width:75vw;
+	height:70vh;
+	border:1px solid orange;
+	grid-template-columns:1fr auto;
+	grid-template-rows:1fr;
+	grid-template-areas:"input result";
+	background-color:ivory;
+	border-radius:5px;
+	box-shadow:5px 5px beige;
+}
+#input{
+	width:50vw;
+	height:50vh;
+	grid-area:"input";
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows:auto 1fr;
+	grid-gap:5vh;
+	grid-template-areas:"screen"
+						"btn-box";
+}
+#result{
+	grid-area:"result";
+	margin-right:2vw;
+	display:grid;
+	place-items:center;
+	grid-gap:2vh;
+	grid-template-columns:1fr;
+	grid-template-rows:1fr 1fr;
+	grid-template-areas:"real"
+						"key";
+	width:20vw;
+	height:50vh;
+}
+#guage{
+	display:flex;
+	flex-direction:columns;
+	justify-content:space-between;
+}
+#screen{
+	grid-area:"screen";
+	width:40vw;
+	height:10vh;
+	margin-top:5vh;
+	margin-left:2vw;
+	border-radius:5px;
+	background-color:white;
+	border:1px solid orange;
+	position:relative;
+}
+#screen p{
+	position:absolute;
+	right:5vw;
+	font-size:2em;
+	top:0.2vh;
+}
+#btn-box{
+	grid-area:"btn-box";
+	width:45vw;
+	height:45vh;
+	grid-template-columns:1fr 10vw;
+	grid-template-rows:1fr;
+	grid-template-areas:"number control";
+	display:grid;
+	grid-gap:2vw;
+}
+#num-box{
+	grid-area:"number";
+	width:35vw;
+	height:40vh;
+	margin-left:2vw;
+	border:1px solid orange;
+	border-radius:5px;
+	background-color:beige;
+	display:grid;
+	
+	place-items:center;
+	grid-template-columns:repeat(1fr,3);
+	grid-template-rows:repeat(1fr,4);
+	grid-template-areas:"seven eight nine"
+						"four five six"
+						"one two three"
+						"two-zero point zero";
+}
+#two-zero{
+	grid-area:"two-zero";
+}
+#point{
+	grid-area:"point";
+}
+#zero{
+	grid-area:"zero";
+}
+#num-box button{
+	width:7vw;
+	height:7vh;
+	text-align:center;
+	border:1px solid orange;
+	background-color:ivory;
+	font-size:1.5rem;
+	color:orange;
+}
+#num-box button:hover{
+	background-color:white;
+	color:black;
+}
+#one{
+	grid-area:one;
+}
+#two{
+	grid-area:two;
+}
+#three{
+	grid-area:three;
+}
+#four{
+	grid-area:four;
+}
+#five{
+	grid-area:five;
+}
+#six{
+	grid-area:six;
+}
+#seven{
+	grid-area:seven;
+}
+#eight{
+	grid-area:eight;
+}
+#nine{
+	grid-area:nine;
+}
+#control-box{
+	height:40vh;
+	width:10vw;
+	grid-area:"control";
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows:repeat(1fr,4);
+	background-color:beige;
+	place-items:center;
+	border:1px solid orange;
+	border-radius:10px;
+	
+}
+#control-box button{
+	width:50px;
+	height:50px;
+	border:1px solid;
+	border-radius:5px;
+	color:white;
+}
+#control-box button:hover{
+	background-color:white;
+	color:black;
+}
+
+#clear{
+	background-color:red;
+}
+#weight{
+	background-color:blue;
+}
+#height{
+
+	background-color:orange;
+}
+#enter{
+	background-color:green;
+}
+meter{
+	width:20vw;
+	height:30px;
+}
+#real-result{
+	grid-area:"real";
+	text-align:center;
+	
+}
+#key{
+	grid-area:"key";
+	color:midnightblue;
+	font-size:0.7em;
+	
+}
+#guage p{
+	color:orange;
+	font-size:0.5em;
+}
+
+output{
+	color:orange;
+	font-size:2.5em;
+}
+#real-result h1{
+	color:midnightblue;
+	font-size:3em;
+}
+a{
+	text-decoration:none;
+	color:white;
+}
+
+@media only screen and (max-width:768px){
+	.site{
+		height:200vh;
+		display:grid;
+		place-items:center;
+	}
+	#container{
+		width:80vw;
+		height:180vh;
+		display:grid;
+		place-items:center;
+	}
+	#small-container{
+		width:70vw;
+		height:150vh;
+		display:grid;
+		grid-template-rows:repeat(2,auto);
+		grid-template-columns:1fr;
+		grid-template-areas:"input"
+		                    "result";
+	}
+	#input{
+		grid-area:"input";
+		width:95vh;
+		height:60vw;
+		display:grid;
+		grid-template-areas:"screen"
+		                    "btn-box"
+		grid-template-rows:repeat(2,auto);
+		grid-template-columns:1fr;
+		grid-gap:2.5vh;
+	}
+	#btn-box{
+		grid-area:"btn-box";
+		width:60vw;
+		height:50vw;
+		display:grid;
+		grid-template-areas:"num-box control";
+		grid-template-rows:repeat(2,auto);
+		grid-template-columns:1fr;
+		grid-gap:2.5vh;
+	}
+	#screen{
+		width:60vw;
+		height:20vh;
+		grid-area:"screen";
+	}
+	#num-box{
+
+		grid-area:"btn-box";
+		height:50vh;
+	}
+	#control-box{
+		width:20vw;
+		height:50vh;
+		grid-area:"control";
+	}
+	#result{
+		width:60vw;
+		height:40vh;
+		grid-area:"result";
+	}
+	meter{
+	width:40vw;
+	height:30px;
+	}
+	
